@@ -6,6 +6,7 @@ version 0.15.1.
 ## Build & development
 
 Run `grunt` for building and `grunt serve` for preview.
+Run `gulp` for watching typescript files and auto building to output.js which will be picked up by the grunt javascript watchers
 
 ## Testing
 
