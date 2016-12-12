@@ -9,8 +9,8 @@
  * Main module of the application.
  */
 angular
-  .module('legacyApp', [
-    'ngRoute'
+  .module('ts-hack', [
+    'ngRoute',
   ])
   .config(function ($routeProvider) {
     $routeProvider
