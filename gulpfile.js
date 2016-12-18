@@ -10,10 +10,12 @@ gulp.task('default', [ 'typescript' ], function () {
 });
 
 gulp.task('typescript', () => {
+  var tsProject = ts.createProject('tsconfig.json', { noImplicitAny: true });
   return gulp.src('app/**/*.ts')
-          .pipe(ts({
-              noImplicitAny: true,
-              out: 'output.js'
-          }))
+          .pipe(tsProject())
+          //.pipe(ts({
+          //    noImplicitAny: true,
+          //    out: 'output.js'
+          //}))
           .pipe(gulp.dest('app/scripts/'));
 });

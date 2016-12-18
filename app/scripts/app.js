@@ -1,3 +1,4 @@
+
 'use strict';
 
 /**
@@ -9,7 +10,7 @@
  * Main module of the application.
  */
 angular
-  .module('legacyApp', [
+  .module('ts-hack', [
     'ngRoute'
   ])
   .config(function ($routeProvider) {
