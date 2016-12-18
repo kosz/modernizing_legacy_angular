@@ -1,6 +1,6 @@
 declare var angular: any;
 
-import {makeDirective, makeSelector} from './a1to2/component-utils';
+import {makeDirective, makeSelector} from './a1to2';
 import {TimerComponent} from './controllers/timer';
 
 angular.module('legacyApp', [ 'ts-hack' ])

@@ -1,9 +1,10 @@
-import {Inject} from '../a1to2/di';
+import {Inject, Component} from '../a1to2';
 
+@Component({
+  selector: 'timer',
+  template: '<div>{{ hello }} Timer Component {{ ctrl.timer + 1 }}</div>'
+})
 export class TimerComponent {
-
-  private static selector = 'timer';
-  private static template = '<div>{{ hello }} Timer Component {{ ctrl.timer + 1 }}</div>';
 
   private timer: number;
 
@@ -12,6 +13,10 @@ export class TimerComponent {
     ) {
     this.timer = 0;
     $scope.hello = 'world'
+  }
+  
+  myClick() {
+    console.log('i got clicked');
   }
   
 };
