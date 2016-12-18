@@ -61,3 +61,16 @@ The typescript files can be found under Chrome Dev Tools > Sources > webpack://
 ### 8. open an issue if I've forgotten any steps
 
 :sweat_smile:
+
+
+## Setting up ng-redux
+
+### Install redux and stuff
+
+```
+npm install redux redux-thunk ng-redux --save
+npm install typings -g
+typings install -SG dt~redux-thunk
+```
+
+### Add NgRedux
