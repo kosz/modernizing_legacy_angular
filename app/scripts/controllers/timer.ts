@@ -2,7 +2,7 @@ import {Inject, Component} from '../a1to2';
 
 @Component({
   selector: 'timer',
-  template: '<div>{{ hello }} Timer Component {{ ctrl.timer + 1 }}</div>'
+  template: '<div ng-click="ctrl.myClick()">{{ hello }} Timer Component {{ ctrl.timer + 1 }}</div>'
 })
 export class TimerComponent {
 
