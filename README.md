@@ -4,6 +4,13 @@ This project is generated with [yo angular generator](https://github.com/yeoman/
 version 0.15.1. However this does not matter, the instructions in this repo should work with any 
 legacy angular 1 project.
 
+
+## Look at the commit history
+
+
+
+Look at the [commit history](https://github.com/kosz/modernizing_legacy_angular/commits/master) to understand the steps on how this hijacking was performed on a regular angular 1 repo. Ignore the gulp commit since I scraped that and went with webpack. Note that the server should still be ran with `grunt serve` ( the whole point is for this to work nonintrusively with legacy tools ), however if running `webpack --watch` at the same time, all typescript files referenced by app.ts will be bundled in a javascript file and made available to the grunt side to be served.
+
 ## Build & development
 
 Run `grunt` for building and `grunt serve` for preview.
