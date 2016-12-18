@@ -49,6 +49,15 @@ Webpack will also need to be installed globally.
 
 There are various paths in the files that need to be updated based on the choices made on where they should live in the new project. 
 
-### 7. open an issue if I've forgotten any steps
+### 7. include the javascript output file in your project's index.html
+
+The webpack.config.js declares an output file destination. All your type script code will be compiled here. Including this file 
+in your index.html AFTER your legacy javascript app angular module declaration, will allow the typescript app.ts to take over bootstraping
+while still including your legacy code. 
+
+Please note that the TypeScript files can be debugged directly in Chrome Dev Tools due to the sourcemap features included in this example. 
+The typescript files can be found under Chrome Dev Tools > Sources > webpack://
+
+### 8. open an issue if I've forgotten any steps
 
 :sweat_smile:
