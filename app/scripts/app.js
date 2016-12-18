@@ -1,3 +1,4 @@
+
 'use strict';
 
 /**
@@ -10,7 +11,7 @@
  */
 angular
   .module('ts-hack', [
-    'ngRoute',
+    'ngRoute'
   ])
   .config(function ($routeProvider) {
     $routeProvider

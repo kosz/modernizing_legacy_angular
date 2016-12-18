@@ -3,7 +3,7 @@ import {Inject} from '../a1to2/di';
 export class TimerComponent {
 
   private static selector = 'timer';
-  private static template = '<div>Timer Component {{ ctrl.timer }}</div>';
+  private static template = '<div>Timer Component {{ ctrl.timer + 1}}</div>';
 
   private timer: number;
 

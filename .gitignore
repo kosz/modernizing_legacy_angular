@@ -3,4 +3,5 @@
 /.tmp
 /.sass-cache
 /bower_components
-/app/scripts/output.js
+/app/tstojs.js
+/app/tstojs.js.map
