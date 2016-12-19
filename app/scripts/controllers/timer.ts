@@ -18,16 +18,25 @@ export class TimerComponent {
     @Inject('$ngRedux') private $ngRedux:any
     ) {
     $scope.hello = 'world';
-    // this magically attaches all the functions to the controller
+    // this ngRedux code magically attaches all the functions to the controller
     // mapStateToThis selects the right slice of data from the redux state
     const unsubscribe = $ngRedux.connect(this.mapStateToThis, { updateTimer })(this);
     $scope.$on('$destroy', unsubscribe);
   }
   
+  // this is not used however it serves as an example on how to 
+  // directly dispatch Redux Actions from a Controller Instance Method
+  // however this is not used because instead:
+  // the redux action creator function is bound to our controller by $ngRedux.connect
   myClick() {
     this.$ngRedux.dispatch(updateTimer());
   }
 
+  // this is ng-redux code based on the ng-redux connect pattern 
+  // ( the ng-redux connect pattern is kind of ugly, the @select pattern 
+  //   from ng2-redux is much nicer however not available in ng-redux at this point.
+  //   I may add some code to this repo in the future which can add @select like
+  //   functionality to ng-redux )
   mapStateToThis = (state: any) => {
     return {
       // this gets bound to this.timer which in the template is ctrl.timer
