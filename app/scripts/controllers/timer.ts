@@ -25,8 +25,6 @@ export class TimerComponent {
   }
   
   myClick() {
-    console.log('i got clicked');
-    // this is one way of dispatching
     this.$ngRedux.dispatch(updateTimer());
   }
 
