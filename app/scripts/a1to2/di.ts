@@ -6,13 +6,6 @@ export function getServices(annottee: any, args: any) {
   return services;
 }
 
-// export class DIReceiver {
-//   services: any;
-//   constructor(args) {
-//     this.services = getServices(this.constructor, args);
-//   }
-// }
-
 export function InjectIntoClass(injectables: any) {
   return function(target: any) {
     target.$inject = injectables;

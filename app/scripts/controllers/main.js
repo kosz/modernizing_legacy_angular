@@ -10,7 +10,7 @@
 angular.module('legacyApp')
   .controller('MainCtrl', function () {
     this.awesomeThings = [
-      'HTML5 Boilerplate',
+      'HTML ',
       'AngularJS',
       'Karma'
     ];

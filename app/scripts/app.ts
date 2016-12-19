@@ -15,6 +15,8 @@ angular.module('legacyApp', [ 'ts-hack', ngRedux ])
       makeDirective(TimerComponent));
 
 
+      console.log('starting stuff');
+
 angular.element(document).ready(function() {
   angular.bootstrap(document, ['legacyApp']);
 });

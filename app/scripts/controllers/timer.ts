@@ -1,11 +1,14 @@
 import {Inject, Component} from '../a1to2';
-import {updateTimer} from '../actions/timer';
+import {updateTimer } from '../actions/timer';
 
 @Component({
   selector: 'timer',
-  template: `<div ng-click="ctrl.updateTimer()">
+  template: `<div ng-if="!ctrl.timer.isRequested" ng-click="ctrl.updateTimer()">
                {{ hello }} Timer Component
                {{ ctrl.timer }}
+             </div>
+             <div class="error" ng-if="ctrl.timer.errorMessage">
+              {{ ctrl.timer.errorMessage }}
              </div>
             `
 })
