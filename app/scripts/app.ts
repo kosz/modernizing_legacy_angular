@@ -61,13 +61,16 @@ const logTransaction = (transaction: Transaction): Transaction => {
 const addLocation = (obj: any) => ({...obj, location: getLocation()});
 
 // this obviously should be elsewhere 
-const liteCompose = (arrayOfFunctions: any) => (payload: any) => {
-  let p = payload;
-  arrayOfFunctions.forEach((f: any) => p = f(p));
-  return p;
-};
+const liteCompose = 
+  (arrayOfFunctions: Function[]) => 
+    (payload: any) => 
+      arrayOfFunctions.reduce((val: any, f: Function) => f(val), payload);
 
-const finalProcessTransaction = liteCompose([processTransaction, logTransaction, addLocation]);
+const finalProcessTransaction = liteCompose([
+  processTransaction, 
+  logTransaction, 
+  addLocation
+]);
 
 let transaction:Transaction = finalProcessTransaction({
   date: new Date(),
